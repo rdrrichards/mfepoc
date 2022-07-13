@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: 'reporting', loadChildren: () => import('reporting/Module').then(m => m.QueueModule) }
-];
+const routes: Routes = [{ path: 'queue', loadChildren: () => import('./queue/queue.module').then(m => m.QueueModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
